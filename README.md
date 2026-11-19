@@ -24,6 +24,7 @@ The dataset (`logistics_project_dataset 2_2.xlsx`) consists of two tables:
   * Cleaned the record to a valid numeric value and formatted the entire `Distance_km` column as **Number**.
 * **Relating Trips with Vehicle Master (`XLOOKUP`):**
   * Used Excel's `XLOOKUP` function to pull `Vehicle_Type`, `Capacity_kg`, and `Maintenance_Cost` from `Vehicle_Master` into the trip table using `Vehicle_ID`.
+  * 
 
 
 ### 2. Missing Value Imputation via Group By (Excel Power Query)
@@ -51,10 +52,7 @@ Imported the transformed tables into **Power BI Desktop** and configured **Many-
     * On-Time Delivery % = DIVIDE(CALCULATE(COUNT(Trip_Data_21Merge2[Delivery_Status]),Trip_Data_21Merge2[Delivery_Status]="On-Time"),COUNT(Trip_Data_21Merge2[Trip ID]),0)*100
     * **Cost per km =**
     * Cost per km =DIVIDE(SUM(Trip_Data_21Merge2[Fuel_Consumed_L])* 95  + SUM(Trip_Data_21Merge2[Maintenance_Cost]),SUM(Trip_Data_21Merge2[Distance_km]),0)
-    * # 🚚 Logistics & Transportation: Fleet Performance & Delivery Efficiency
-
-## 📌 Dashboard Overview
-This Power BI report (**Logistics & Transportation - Fleet Performance & Delivery Efficiency**) analyzes fleet performance across routes, vehicle types, and months using **₹95/L** as the assumed fuel price[cite: 9, 10].
+      
 
 ---
 
