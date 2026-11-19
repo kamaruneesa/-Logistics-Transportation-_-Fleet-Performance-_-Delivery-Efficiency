@@ -24,7 +24,7 @@ The dataset (`logistics_project_dataset 2_2.xlsx`) consists of two tables:
   * Cleaned the record to a valid numeric value and formatted the entire `Distance_km` column as **Number**.
 * **Relating Trips with Vehicle Master (`XLOOKUP`):**
   * Used Excel's `XLOOKUP` function to pull `Vehicle_Type`, `Capacity_kg`, and `Maintenance_Cost` from `Vehicle_Master` into the trip table using `Vehicle_ID`.
-  * 
+  * =XLOOKUP([@[Vehicle_ID]],Vehicle_Master_2[Vehicle_ID],Vehicle_Master_2[Vehicle_Type])
 
 
 ### 2. Missing Value Imputation via Group By (Excel Power Query)
